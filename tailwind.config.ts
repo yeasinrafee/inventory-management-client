@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import type { Config } from 'tailwindcss';
 import { createThemes } from 'tw-colors';
 import colors from 'tailwindcss/colors';
@@ -36,6 +35,7 @@ const generateThemeObject = (colors: any, mapping: any, invert = false) => {
       theme[color][key] = colors[color][shadeKey];
     });
   });
+
   return theme;
 };
 
@@ -72,5 +72,4 @@ const config: Config = {
   },
   plugins: [createThemes(themes)],
 };
-
 export default config;
